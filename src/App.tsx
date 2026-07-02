@@ -8,6 +8,7 @@ import Toolbar from './components/Toolbar';
 import SettingsModal from './components/SettingsModal';
 import ExportModal from './components/ExportModal';
 import Resizer from './components/Resizer';
+import UpdateNotifier from './components/UpdateNotifier';
 import { useStore } from './store';
 
 const LEFT_MIN = 160;
@@ -49,6 +50,7 @@ export default function App() {
 
   return (
     <div className="h-full w-full flex flex-col" style={{ background: '#F8F9FA' }}>
+      <UpdateNotifier />
       {/* Top toolbar (full width) */}
       <Toolbar onExport={() => setExportOpen(true)} />
 
