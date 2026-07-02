@@ -1,10 +1,10 @@
 [package]
 name = "app"
-version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+version = "1.0.3"
+description = "Hydronic Pump Head (TDH) Calculator"
+authors = ["Loren C"]
 license = ""
-repository = ""
+repository = "https://github.com/AW-Designs/hydronic-pump-head-calculator"
 edition = "2021"
 rust-version = "1.77.2"
 

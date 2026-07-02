@@ -1,0 +1,30 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App tile: rounded square with a blue→cyan gradient -->
+  <rect x="64" y="64" width="896" height="896" rx="208" fill="url(#bg)"/>
+
+  <!-- Water droplet (hydronic / fluid) -->
+  <path d="M512 236
+           C512 236 700 520 700 660
+           C700 774 616 862 512 862
+           C408 862 324 774 324 660
+           C324 520 512 236 512 236 Z"
+        fill="#ffffff"/>
+
+  <!-- Bold "H" for Head (TDH), built from bars so it renders without fonts -->
+  <g fill="url(#mark)">
+    <rect x="446" y="556" width="48" height="212" rx="10"/>
+    <rect x="530" y="556" width="48" height="212" rx="10"/>
+    <rect x="446" y="638" width="132" height="48" rx="10"/>
+  </g>
+</svg>
