@@ -1,7 +1,7 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "Hydronic Pump Head Calculator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "identifier": "ca.lorenc.hydronic-pump-head-calculator",
   "build": {
     "frontendDist": "../dist",
