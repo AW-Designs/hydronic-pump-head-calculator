@@ -1,7 +1,7 @@
 {
   "name": "hydronic-pump-head-calculator",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "module",
   "description": "Professional Hydronic Pump Head (TDH) Calculator",
   "scripts": {
