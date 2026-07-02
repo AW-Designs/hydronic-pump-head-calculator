@@ -6,3 +6,8 @@ dist-portable
 .DS_Store
 node_modules/.tmp
 *.tsbuildinfo
+
+# Tauri build artifacts + update signing key (NEVER commit the private key)
+src-tauri/target
+src-tauri/updater.key
+src-tauri/gen
