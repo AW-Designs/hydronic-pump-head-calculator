@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #f8f9fa;
+  color: #111827;
+  overflow: hidden;
+}
+
+/* React Flow tweaks */
+.react-flow__attribution {
+  display: none;
+}
+
+/* Connection dots at each side midpoint (see nodes.tsx `Ports`). Hidden until the
+   node is hovered, then they fade in as clear, grabbable ports. The node interior
+   stays free for click-drag repositioning. */
+.react-flow__handle.pipe-port {
+  cursor: crosshair;
+  opacity: 0;
+  transition: opacity 120ms ease, box-shadow 120ms ease;
+}
+.react-flow__node:hover .react-flow__handle.pipe-port,
+.react-flow__handle.pipe-port.connectingfrom,
+.react-flow__handle.pipe-port.connectingto {
+  opacity: 1;
+}
+.react-flow__handle.pipe-port:hover {
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25);
+}
+
+/* Closed-loop glow animation (pump loop highlight) */
+@keyframes loopGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 3px rgba(37, 99, 235, 0.7));
+  }
+  50% {
+    filter: drop-shadow(0 0 7px rgba(37, 99, 235, 1));
+  }
+}
+
+.loop-glow {
+  animation: loopGlow 2s ease-in-out infinite;
+}
+
+/* Attention ring for the element selected from a warning / segment row.
+   --focus-color is set inline (red / amber / blue by severity). The animated
+   box-shadow takes precedence over the card's inline box-shadow. */
+@keyframes focusPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 2px var(--focus-color), 0 0 6px 2px var(--focus-color);
+  }
+  50% {
+    box-shadow: 0 0 0 4px var(--focus-color), 0 0 16px 6px var(--focus-color);
+  }
+}
+.focus-pulse {
+  animation: focusPulse 1.1s ease-in-out infinite;
+}
+
+/* Edge variant — pulse the stroke opacity of an overlay path. */
+@keyframes edgeFocusPulse {
+  0%,
+  100% {
+    stroke-opacity: 0.25;
+  }
+  50% {
+    stroke-opacity: 0.75;
+  }
+}
+.edge-focus-pulse {
+  animation: edgeFocusPulse 1.1s ease-in-out infinite;
+}
+
+/* Properties panel field label */
+.field-label {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.field-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.calc-value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+input[type='number'],
+input[type='text'],
+input[type='date'],
+select,
+textarea {
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* Thin scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(107, 114, 128, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
